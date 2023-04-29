@@ -1,0 +1,26 @@
+{
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "rust-analyzer.linkedProjects": ["./contracts/cert_token/Cargo.toml"],
+  "runTerminalCommand.commands": [
+    {
+      "command": "swanky contract compile cert_token -v && swanky contract test cert_token",
+      "auto": true
+    },
+    {
+      "command": "cargo +nightly test",
+      "auto": true
+    },
+    {
+      "command": "cargo +nightly build",
+      "auto": true
+    }
+  ],
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  }
+}
